@@ -9,6 +9,7 @@ type Mutation {
     login(email: String!, password:String!): Auth
     addUser(username: String!, email: String!, password: String!): Auth
     saveBook(bookTosave: BookInput): User
+    removeBook(bookId: ID!): User
 }
 
 type User {
@@ -45,3 +46,5 @@ input BookInput {
 
 
 `;
+
+module.exports = typeDefs;
